@@ -10,6 +10,10 @@
 1. PointCloud.prefabをHierarchieに配置します
 1. 点群の大きさはInspectorのSizeで変更できます
 
+## 点群の追加方法
+PointCloudShaderは点群データをテクスチャに埋め込んでいます。テクスチャの生成方法が少し面倒なので、下記コード等を参考にしていただくかクワマイにお問い合わせください。
+* [HIP_VRC/hip2tex.ipynb · Kuwamai/HIP_VRC](https://github.com/Kuwamai/HIP_VRC/blob/master/hip2tex.ipynb)
+
 ## References & Includings
 PointCloud.shaderはPhi16_さんが書いてくださった[pointcloud.shader](https://twitter.com/phi16_/status/1041256230545612800)を一部改変して作成しました。
 
