@@ -4,7 +4,7 @@
     {
         _Pos ("Pos", 2D) = "white" {}
         _Col ("Col", 2D) = "white" {}
-        _Size ("Particle size", Range(0, 1)) = 0.1
+        _Size ("Particle size", Range(0, 1)) = 0.05
     }
     SubShader
     {
