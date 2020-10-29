@@ -274,6 +274,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PointCloud
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4068c011caa84050b8107805d8daaed9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4068c011caa84050b8107805d8daaed9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
