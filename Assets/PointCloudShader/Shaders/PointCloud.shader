@@ -3,7 +3,7 @@
     Properties
     {
         [HDR] _Pos ("Pos", 2D) = "white" {}
-        _Col ("Col", 2D) = "white" {}
+        [HDR] _Col ("Col", 2D) = "white" {}
         _Size ("Particle size", Range(0, 1)) = 0.05
     }
     SubShader
@@ -37,6 +37,7 @@
             float4 _Pos_HDR;
             float4 _Pos_TexelSize;
             sampler2D _Col;
+            float4 _Col_HDR;
             float4 _Col_TexelSize;
             float _Size;
 
@@ -75,7 +76,7 @@
                 float2 uv = float2((floor(v.vertex.z / texWidth) + 0.5) / texWidth, (fmod(v.vertex.z, texWidth) + 0.5) / texWidth);
 
                 float3 p = unpack(uv).xzy;
-                float3 c = tex2Dlod(_Col, float4(uv,0,0)).xyz;
+                float3 c = DecodeHDR(tex2Dlod(_Col, float4(uv,0,0)), _Col_HDR).xyz;
 
                 float3 worldPos = mul(unity_ObjectToWorld, float4(p, 1));
                 o.color = c;
