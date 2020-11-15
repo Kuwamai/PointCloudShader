@@ -2,7 +2,7 @@
 {
     Properties
     {
-        _Pos ("Pos", 2D) = "white" {}
+        [HDR] _Pos ("Pos", 2D) = "white" {}
         _Col ("Col", 2D) = "white" {}
         _Size ("Particle size", Range(0, 1)) = 0.05
     }
@@ -34,6 +34,7 @@
             };
             
             sampler2D _Pos;
+            float4 _Pos_HDR;
             float4 _Pos_TexelSize;
             sampler2D _Col;
             float4 _Col_TexelSize;
@@ -42,10 +43,10 @@
             float3 unpack(float2 uv) {
                 float texWidth = _Pos_TexelSize.z;
                 float2 e = float2(-1.0/texWidth/2, 1.0/texWidth/2);
-                uint3 v0 = uint3(tex2Dlod(_Pos, float4(uv + e.xy,0,0)).xyz * 255.) << 0;
-                uint3 v1 = uint3(tex2Dlod(_Pos, float4(uv + e.yy,0,0)).xyz * 255.) << 8;
-                uint3 v2 = uint3(tex2Dlod(_Pos, float4(uv + e.xx,0,0)).xyz * 255.) << 16;
-                uint3 v3 = uint3(tex2Dlod(_Pos, float4(uv + e.yx,0,0)).xyz * 255.) << 24;
+                uint3 v0 = uint3(DecodeHDR(tex2Dlod(_Pos, float4(uv + e.xy,0,0)), _Pos_HDR).xyz * 255.) << 0;
+                uint3 v1 = uint3(DecodeHDR(tex2Dlod(_Pos, float4(uv + e.yy,0,0)), _Pos_HDR).xyz * 255.) << 8;
+                uint3 v2 = uint3(DecodeHDR(tex2Dlod(_Pos, float4(uv + e.xx,0,0)), _Pos_HDR).xyz * 255.) << 16;
+                uint3 v3 = uint3(DecodeHDR(tex2Dlod(_Pos, float4(uv + e.yx,0,0)), _Pos_HDR).xyz * 255.) << 24;
                 uint3 v = v0 + v1 + v2 + v3;
                 return asfloat(v);
             }
