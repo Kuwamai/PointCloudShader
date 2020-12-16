@@ -16,7 +16,7 @@ PointCloudShaderは点群データをテクスチャに埋め込んでいます�
 * [ソーシャルVRに点群を持ち込みたい - クワマイでもできる](https://kuwamai.hatenablog.com/entry/2020/12/17/013711)
 
 ## References & Includings
-* PointCloud.shaderはPhi16_さんが書いてくださった[pointcloud.shader](https://twitter.com/phi16_/status/1041256230545612800)を一部改変して作成しました。
+* PointCloud.shaderはPhi16_さんが書いてくださった[pointcloud.shader](https://twitter.com/phi16_/status/1041256230545612800)を一部改変して作成しました
 * 点群データ: 渋谷地下3Dデータ ©3D City Experience Lab https://3dcel.com/opendata/
     * Licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
 
