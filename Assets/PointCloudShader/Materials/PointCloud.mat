@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: PointCloud
-  m_Shader: {fileID: 4800000, guid: ec00486632a281b6a8ef5cc0bef65ea5, type: 3}
+  m_Shader: {fileID: 4800000, guid: 438e922a3a79c374a9e07c94f53d59e3, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -24,7 +24,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Col:
-        m_Texture: {fileID: 2800000, guid: f8feefe2cd7d5522b9009da55147a8f7, type: 3}
+        m_Texture: {fileID: 2800000, guid: 41202fc61859f2246a99243ca742a26f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -64,7 +64,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Pos:
-        m_Texture: {fileID: 2800000, guid: 4cced6dd66f3c447eb18b5453c2929a4, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4b1ab590f46427f4284e1ae893f5122a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
